@@ -13,7 +13,7 @@
 SRC_DIR = .  //To indicate the directory of sources files ("." for current directory)
 INC_DIR = .  //To indicate the included headers directory
 
-SRC = $(addprefix $(SRC_DIR)/, \   //Source Files used in the program
+SRC = $(addprefix $(SRC_DIR)/, \   //Source Files used in the program addprefix allows to add source directory to the files if the are in a different directory
 		ft_memmove.c \
 		ft_memcpy.c \
 		ft_strlcpy.c \
@@ -62,7 +62,7 @@ BONUS = $(addprefix $(SRC_DIR)/, \  //bonus files
 		ft_lstnew.c \
 )
 
-OBJS = $(SRC:.c=.o)  //object files to be created from source files
+OBJS = $(SRC:.c=.o)  //object files to be created from source files .c is replaced by .o
 OBJS_B = $(BONUS:.c=.o)
 
 NAME = libft.a //Name of program to be created
