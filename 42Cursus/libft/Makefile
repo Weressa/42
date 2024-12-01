@@ -10,8 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRC_DIR = .
-INC_DIR = .
+SRC_DIR = .  //To indicate the directory of sources files ("." for current directory)
+INC_DIR = .  // To indicate the included headers directory
 
 SRC = $(addprefix $(SRC_DIR)/, \
 		ft_memmove.c \
