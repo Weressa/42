@@ -11,9 +11,9 @@
 # **************************************************************************** #
 
 SRC_DIR = .  //To indicate the directory of sources files ("." for current directory)
-INC_DIR = .  // To indicate the included headers directory
+INC_DIR = .  //To indicate the included headers directory
 
-SRC = $(addprefix $(SRC_DIR)/, \
+SRC = $(addprefix $(SRC_DIR)/, \   //Source Files used in the program
 		ft_memmove.c \
 		ft_memcpy.c \
 		ft_strlcpy.c \
@@ -50,7 +50,7 @@ SRC = $(addprefix $(SRC_DIR)/, \
 		ft_strlen.c \
 )
 
-BONUS = $(addprefix $(SRC_DIR)/, \
+BONUS = $(addprefix $(SRC_DIR)/, \  //bonus files
 		ft_lstadd_back.c \
 		ft_lstclear.c \
 		ft_lstiter.c \
@@ -62,31 +62,33 @@ BONUS = $(addprefix $(SRC_DIR)/, \
 		ft_lstnew.c \
 )
 
-OBJS = $(SRC:.c=.o)
+OBJS = $(SRC:.c=.o)  //object files to be created from source files
 OBJS_B = $(BONUS:.c=.o)
-NAME = libft.a
-CC = gcc
+
+NAME = libft.a //Name of program to be created
+
+CC = gcc //Complier used
 AR = ar
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror //To call the flags used for compilation
 INC = $(INC_DIR)/libft.h
 
 all: $(NAME)
 
-$(NAME) : $(OBJS)
+$(NAME) : $(OBJS) // rule to create NAME
 	$(AR) rcs $(NAME) $(OBJS)
 
 bonus: 	$(OBJS) $(OBJS_B) 
 	$(AR) rcs $(NAME) $(OBJS_B)
 	
-%.o: %.c $(INC)
+%.o: %.c $(INC) // object files creation 
 	$(CC) $(FLAGS) -c $< -o $@ -I$(INC_DIR)
 	
 clean:
-	rm -f $(OBJS) $(OBJS_B)
+	rm -f $(OBJS) $(OBJS_B)  //To remove object files .o
 
-fclean: clean
-	rm -f $(NAME)
+fclean: clean  // to tell program to execute clean first
+	rm -f $(NAME)  // then to execute this second (remove all files of NAME)
 
-re: fclean all
+re: fclean all  // To redo all 
 
-.PHONY: all bonus clean fclean re
+.PHONY: all bonus clean fclean re //add all the rules used so they wont be mistaken as files.
