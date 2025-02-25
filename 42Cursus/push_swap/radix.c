@@ -6,11 +6,17 @@
 /*   By: assabich <assabich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 17:03:10 by assabich          #+#    #+#             */
-/*   Updated: 2025/02/21 19:36:52 by assabich         ###   ########.fr       */
+/*   Updated: 2025/02/23 12:07:00 by assabich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	sort_negative(t_stack **a)
+{
+	while (!sorted(*a))
+		ra(a);
+}
 
 void	radix(t_stack **a, t_stack **b)
 {
@@ -22,7 +28,6 @@ void	radix(t_stack **a, t_stack **b)
 	i = 0;
 	if (!a || !(*a) || stack_size(*a) <= 1)
 		return ;
-	size = stack_size(*a);
 	while (bit < bit_max(*a))
 	{
 		i = 0;
@@ -39,4 +44,5 @@ void	radix(t_stack **a, t_stack **b)
 			pa(a, b);
 		bit++;
 	}
+	sort_negative(a);
 }

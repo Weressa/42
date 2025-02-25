@@ -6,12 +6,12 @@
 #    By: assabich <assabich@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 19:23:26 by assabich          #+#    #+#              #
-#    Updated: 2025/02/21 17:33:07 by assabich         ###   ########.fr        #
+#    Updated: 2025/02/23 17:18:51 by assabich         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -g3
 NAME = push_swap
 
 SRC =	append_node.c \
@@ -42,7 +42,9 @@ SRC =	append_node.c \
 	sa.c \
 	sb.c \
 	ss.c \
-
+	sorted.c \
+	sort3.c \
+	sort5.c
 
 INC = push_swap.h
 

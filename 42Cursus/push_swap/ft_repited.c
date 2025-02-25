@@ -6,13 +6,13 @@
 /*   By: assabich <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 18:42:46 by assabich          #+#    #+#             */
-/*   Updated: 2025/02/18 19:19:26 by assabich         ###   ########.fr       */
+/*   Updated: 2025/02/23 13:10:47 by assabich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_repited(t_stack *a, long nbr)
+int	ft_repited(t_stack *a, int nbr)
 {
 	if (a == NULL)
 		return (0);

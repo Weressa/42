@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free_av.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: assabich <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: assabich <assabich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 20:12:48 by assabich          #+#    #+#             */
-/*   Updated: 2025/02/20 14:51:07 by assabich         ###   ########.fr       */
+/*   Updated: 2025/02/25 02:02:45 by assabich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,13 @@ void	free_av(char **av)
 {
 	int	i;
 
-	i = -1;
+	i = 0;
 	if (!av || !(*av))
 		return ;
 	while (av[i])
-		free(av[i++]);
-	free(av - 1);
+	{
+		free(av[i]);
+		i++;
+	}
+	free(av);
 }

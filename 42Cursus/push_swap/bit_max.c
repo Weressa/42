@@ -6,7 +6,7 @@
 /*   By: assabich <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 21:04:23 by assabich          #+#    #+#             */
-/*   Updated: 2025/02/18 15:29:13 by assabich         ###   ########.fr       */
+/*   Updated: 2025/02/22 14:02:58 by assabich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	bit_max(t_stack *a)
 	int	n;
 	int	max;
 
-	n = 0;
+	n = 1;
 	if (!a)
 		return (0);
 	max = a->value;
