@@ -6,7 +6,7 @@
 /*   By: assabich <assabich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 13:59:05 by assabich          #+#    #+#             */
-/*   Updated: 2025/02/25 02:55:58 by assabich         ###   ########.fr       */
+/*   Updated: 2025/02/25 18:53:45 by assabich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,6 @@ int	main(int ac, char **av)
 		create_if(&a, av, bol);
 		push_swap(&a, &b);
 	}
+	free_stack(&a);
 	return (0);
 }

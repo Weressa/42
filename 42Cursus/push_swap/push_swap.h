@@ -6,7 +6,7 @@
 /*   By: assabich <assabich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 14:08:08 by assabich          #+#    #+#             */
-/*   Updated: 2025/02/23 16:46:22 by assabich         ###   ########.fr       */
+/*   Updated: 2025/02/27 17:43:23 by assabich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct s_stack
 	struct s_stack	*next;
 	struct s_stack	*prev;
 	int				index;
-	int				value;
+	long			value;
 }	t_stack;
 
 //program
@@ -42,12 +42,12 @@ char	*ft_strchr(const char *s, int c);
 //create stack
 void	create_stack(t_stack **a, char **av, bool flag);
 long	ft_atol(char *str);
-void	append_node(t_stack **a, int nbr);
+void	append_node(t_stack **a, long nbr);
 t_stack	*last_node(t_stack *head);
 
 // free and error 
 int		error_syntax(char *str);
-int		ft_repited(t_stack *a, int nbr);
+int		ft_repited(t_stack *a, long nbr);
 void	free_error(t_stack **a, char **av, bool flag);
 void	free_stack(t_stack **a);
 void	free_av(char **av);
@@ -59,6 +59,8 @@ void	radix(t_stack **a, t_stack **b);
 int		sorted(t_stack *a);
 void	sort3(t_stack **a);
 void	sort5(t_stack **a, t_stack **b);
+void	bubble_sort(t_stack **a);
+
 //commands
 void	pa(t_stack **a, t_stack **b);
 void	pb(t_stack **a, t_stack **b);

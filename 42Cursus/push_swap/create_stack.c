@@ -6,7 +6,7 @@
 /*   By: assabich <assabich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 15:42:34 by assabich          #+#    #+#             */
-/*   Updated: 2025/02/25 02:34:36 by assabich         ###   ########.fr       */
+/*   Updated: 2025/02/27 19:09:42 by assabich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ void	create_stack(t_stack **a, char **av, bool flag)
 		nbr = ft_atol(*av);
 		if (nbr > INT_MAX || nbr < INT_MIN)
 			free_error(a, av, f);
-		if (ft_repited(*a, (int)nbr))
+		if (ft_repited(*a, nbr))
 			free_error(a, av, f);
-		append_node(a, (int)nbr);
+		append_node(a, nbr);
 		av++;
 	}
 	create_index(a);

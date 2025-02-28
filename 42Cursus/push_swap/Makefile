@@ -6,7 +6,7 @@
 #    By: assabich <assabich@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 19:23:26 by assabich          #+#    #+#              #
-#    Updated: 2025/02/23 17:18:51 by assabich         ###   ########.fr        #
+#    Updated: 2025/02/27 17:43:42 by assabich         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,8 @@ SRC =	append_node.c \
 	ss.c \
 	sorted.c \
 	sort3.c \
-	sort5.c
+	sort5.c \
+	bubble_sort.c
 
 INC = push_swap.h
 

@@ -6,13 +6,13 @@
 /*   By: assabich <assabich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 14:30:49 by assabich          #+#    #+#             */
-/*   Updated: 2025/02/23 13:10:19 by assabich         ###   ########.fr       */
+/*   Updated: 2025/02/27 19:09:14 by assabich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*create_node(int nbr)
+t_stack	*create_node(long nbr)
 {
 	t_stack	*node;
 
@@ -24,7 +24,7 @@ t_stack	*create_node(int nbr)
 	return (node);
 }
 
-void	append_node(t_stack **a, int nbr)
+void	append_node(t_stack **a, long nbr)
 {
 	t_stack	*node;
 	t_stack	*last;
