@@ -6,7 +6,7 @@
 /*   By: assabich <assabich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 14:08:08 by assabich          #+#    #+#             */
-/*   Updated: 2025/02/27 17:43:23 by assabich         ###   ########.fr       */
+/*   Updated: 2025/03/04 14:28:35 by assabich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strchr(const char *s, int c);
 
 //create stack
-void	create_stack(t_stack **a, char **av, bool flag);
+void	create_stack(t_stack **a, char **av);
 long	ft_atol(char *str);
 void	append_node(t_stack **a, long nbr);
 t_stack	*last_node(t_stack *head);
@@ -48,9 +48,9 @@ t_stack	*last_node(t_stack *head);
 // free and error 
 int		error_syntax(char *str);
 int		ft_repited(t_stack *a, long nbr);
-void	free_error(t_stack **a, char **av, bool flag);
+void	free_error(t_stack **a, char **str);
 void	free_stack(t_stack **a);
-void	free_av(char **av);
+void	free_str(char **str);
 
 //sorting
 int		stack_size(t_stack *a);

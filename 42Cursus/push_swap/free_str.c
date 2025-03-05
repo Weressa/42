@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_av.c                                          :+:      :+:    :+:   */
+/*   free_str.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: assabich <assabich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/17 20:12:48 by assabich          #+#    #+#             */
-/*   Updated: 2025/02/25 02:02:45 by assabich         ###   ########.fr       */
+/*   Created: 2025/03/04 14:09:04 by assabich          #+#    #+#             */
+/*   Updated: 2025/03/04 14:09:27 by assabich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_av(char **av)
+void	free_str(char **str)
 {
 	int	i;
 
 	i = 0;
-	if (!av || !(*av))
-		return ;
-	while (av[i])
+	while (str[i])
 	{
-		free(av[i]);
+		free(str[i]);
 		i++;
 	}
-	free(av);
+	free(str);
 }

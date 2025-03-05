@@ -6,22 +6,11 @@
 /*   By: assabich <assabich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 13:59:05 by assabich          #+#    #+#             */
-/*   Updated: 2025/02/25 18:53:45 by assabich         ###   ########.fr       */
+/*   Updated: 2025/03/04 14:39:54 by assabich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	create_if(t_stack **a, char **av, int bol)
-{
-	if (bol)
-	{
-		create_stack(a, av, bol);
-		free_av(av);
-	}
-	else
-		create_stack(a, av + 1, bol);
-}
 
 void	push_swap(t_stack **a, t_stack **b)
 {
@@ -32,7 +21,10 @@ void	push_swap(t_stack **a, t_stack **b)
 		else if (stack_size(*a) >= 4 && stack_size(*a) <= 5)
 			sort5(a, b);
 		else
+		{
+			bubble_sort(a);
 			radix(a, b);
+		}
 	}
 }
 
@@ -40,23 +32,24 @@ int	main(int ac, char **av)
 {
 	t_stack	*a;
 	t_stack	*b;
-	int		bol;
 
 	a = NULL;
 	b = NULL;
-	bol = 0;
-	if ((ac == 1) || (ac == 2 && !av[1][0]))
-		return (1);
-	else if (ac == 2 && ft_strchr(av[1], ' '))
-	{
-		av = ft_split(av[1], ' ');
-		bol = 1;
-	}
-	if (ac >= 2)
-	{
-		create_if(&a, av, bol);
-		push_swap(&a, &b);
-	}
+	if (ac < 2)
+		return (-1);
+	create_stack(&a, av);
+	push_swap(&a, &b);
 	free_stack(&a);
+	free_stack(&b);
 	return (0);
 }
+/*
+t_stack	*temp;
+temp = NULL;
+temp = a;
+while (temp)
+{
+	printf("%ld", temp->value);
+	temp = temp->next;
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: assabich <assabich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 15:42:34 by assabich          #+#    #+#             */
-/*   Updated: 2025/02/27 19:09:42 by assabich         ###   ########.fr       */
+/*   Updated: 2025/03/04 14:43:06 by assabich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,37 @@ void	create_index(t_stack **a)
 	}
 }
 
-void	create_stack(t_stack **a, char **av, bool flag)
+void	ft_errortab(char **tab)
 {
-	long	nbr;
-	bool	f;
+	free_str(tab);
+	exit(1);
+}
 
-	f = flag;
-	while (*av)
+void	create_stack(t_stack **a, char **av)
+{
+	char	**tab;
+	long	nbr;
+	int		x;
+	int		i;
+
+	x = -1;
+	i = 0;
+	while (av[++i])
 	{
-		if (error_syntax(*av))
-			free_error(a, av, flag);
-		nbr = ft_atol(*av);
-		if (nbr > INT_MAX || nbr < INT_MIN)
-			free_error(a, av, f);
-		if (ft_repited(*a, nbr))
-			free_error(a, av, f);
-		append_node(a, nbr);
-		av++;
+		tab = ft_split(av[i], ' ');
+		if (!tab)
+			ft_errortab(tab);
+		while (tab[++x])
+		{
+			if (error_syntax(tab[x]))
+				free_error(a, tab);
+			nbr = ft_atol(tab[x]);
+			if (nbr > INT_MAX || nbr < INT_MIN || ft_repited(*a, nbr))
+				free_error(a, tab);
+			append_node(a, nbr);
+		}
+		x = -1;
+		free_str(tab);
 	}
 	create_index(a);
 }

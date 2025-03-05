@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bit_max.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: assabich <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: assabich <assabich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 21:04:23 by assabich          #+#    #+#             */
-/*   Updated: 2025/02/22 14:02:58 by assabich         ###   ########.fr       */
+/*   Updated: 2025/03/01 13:57:35 by assabich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,14 @@
 
 int	bit_max(t_stack *a)
 {
-	int	n;
+	int	bits;
 	int	max;
 
-	n = 1;
+	bits = 0;
 	if (!a)
 		return (0);
-	max = a->value;
-	while (a)
-	{
-		if (max < a->value)
-			max = a->value;
-		a = a->next;
-	}
-	while (max)
-	{
-		n++;
-		max >>= 1;
-	}
-	return (n);
+	max = stack_size(a) - 1;
+	while ((max >> bits) != 0)
+		bits++;
+	return (bits);
 }

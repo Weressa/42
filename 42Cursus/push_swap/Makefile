@@ -6,7 +6,7 @@
 #    By: assabich <assabich@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 19:23:26 by assabich          #+#    #+#              #
-#    Updated: 2025/02/27 17:43:42 by assabich         ###   ########.fr        #
+#    Updated: 2025/03/04 14:10:01 by assabich         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRC =	append_node.c \
 	ft_strchr.c \
 	ft_atol.c \
 	ft_repited.c \
-	free_av.c \
+	free_str.c \
 	error_syntax.c \
 	free_error.c \
 	free_stack.c \
