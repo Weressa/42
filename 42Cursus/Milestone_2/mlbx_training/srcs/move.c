@@ -6,13 +6,11 @@
 /*   By: assabich <assabich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 15:11:31 by assabich          #+#    #+#             */
-/*   Updated: 2025/03/05 15:11:45 by assabich         ###   ########.fr       */
+/*   Updated: 2025/03/10 13:44:26 by assabich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.c"
-
-#include "so_long.h"
+#include "../includes/so_long.h"
 
 // Move player if the target position is valid
 void move_player(t_game *game, int dx, int dy)

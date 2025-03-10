@@ -6,7 +6,7 @@
 /*   By: assabich <assabich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 15:16:47 by assabich          #+#    #+#             */
-/*   Updated: 2025/03/05 15:16:49 by assabich         ###   ########.fr       */
+/*   Updated: 2025/03/10 15:06:46 by assabich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 # include <stdio.h>   // printf (for debugging)
 
 // 📚 Custom Libraries
-# include "mlx.h"     // MiniLibX for graphics
-# include "libft.h"   // Libft (includes get_next_line & ft_printf)
+# include "../minilibx-linux/mlx.h"     // MiniLibX for graphics
+# include "../libft/libft.h"   // Libft (includes get_next_line & ft_printf)
 
 // 🎮 Game Constants
 # define TILE_SIZE 32  // Size of each tile in pixels
@@ -61,8 +61,8 @@ typedef struct s_game
 }   t_game;
 
 // 🗺 Map Functions
-char    **read_map(char *filename); // Read .ber file into 2D array
-void    free_map(char **map);       // Free allocated memory for map
+int read_map(char *filename, t_game *game);
+void free_map(t_game *game);       // Free allocated memory for map
 
 // 🎨 Rendering Functions
 void    load_textures(t_game *game); // Load all textures

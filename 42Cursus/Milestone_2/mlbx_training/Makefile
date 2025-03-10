@@ -6,7 +6,7 @@
 #    By: assabich <assabich@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/05 15:12:44 by assabich          #+#    #+#              #
-#    Updated: 2025/03/05 15:25:58 by assabich         ###   ########.fr        #
+#    Updated: 2025/03/10 14:02:10 by assabich         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ LIBFT_FLAGS = -L$(LIBFT_DIR) -lft
 INCLUDE = -I includes -I $(MLX_DIR) -I $(LIBFT_DIR)/includes
 
 # Source Files and Object Files
-SRC = srcs/main.c srcs/map.c srcs/move.c srcs/render.c srcs/gnl_utils.c srcs/ft_printf.c
+SRC = srcs/main.c srcs/map.c srcs/move.c srcs/render.c
 OBJ = $(SRC:.c=.o)
 
 # Targets
